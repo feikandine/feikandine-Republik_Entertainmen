@@ -1,0 +1,102 @@
+/* Footer */
+footer {
+    background-color: #e4e4e4;
+    color: #000000;
+    padding: 2rem 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10rem;
+    padding: 1rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.footer-logo img {
+    width: 320px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #000000; /* Match this with other primary elements */
+}
+
+.footer-links ul {
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+}
+
+.footer-links li {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff0000; /* Match primary hover color */
+}
+
+.footer-contact p,
+.footer-social a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-contact i,
+.footer-social i {
+    margin-right: 5px;
+    color: #ff0000;
+}
+
+.footer-social a {
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}

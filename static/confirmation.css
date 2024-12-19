@@ -1,0 +1,297 @@
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&family=Big+Shoulders+Stencil+Display:wght@400&display=swap&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Header */ 
+header {
+    background-color: #f0f0f0;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 9px 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex: 1; 
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+
+nav a.active {
+    color: #ff0000; 
+    font-weight: bold; 
+}
+
+
+.logo img {
+    height: 100%; 
+    max-height: 70px; 
+    width: auto; 
+}
+
+.cta-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc0000;
+}
+/* Section principale de confirmation */
+.confirmation-section {
+    text-align: center;
+    padding: 10rem 2rem; /* Espacement pour aérer le contenu */
+    background-color: #f9f9f9;
+}
+
+.confirmation-section h1 {
+    font-size: 3rem;
+    color: #4CAF50; /* Couleur verte pour une sensation de succès */
+    margin-bottom: 1rem;
+}
+
+.confirmation-section p {
+    font-size: 1.2rem;
+    color: #333; /* Texte en gris foncé */
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.confirmation-section .button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50; /* Vert pour continuer le thème de succès */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.confirmation-section .button:hover {
+    background-color: #45a049; /* Légèrement plus foncé au survol */
+}
+
+/* Styles pour petits écrans */
+@media screen and (max-width: 768px) {
+    .confirmation-section {
+        padding: 5rem 1rem; /* Moins d'espacement */
+    }
+
+    .confirmation-section h1 {
+        font-size: 2rem;
+    }
+
+    .confirmation-section p {
+        font-size: 1rem;
+    }
+
+    .confirmation-section .button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .confirmation-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .confirmation-section p {
+        font-size: 0.9rem;
+    }
+
+    .confirmation-section .button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 2rem 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10rem;
+    padding: 0rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.footer-logo img {
+    width: 320px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #000000; /* Match this with other primary elements */
+}
+
+.footer-links ul {
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+}
+
+.footer-links li {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff0000; /* Match primary hover color */
+}
+
+.footer-contact p,
+.footer-social a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-contact i,
+.footer-social i {
+    margin-right: 5px;
+    color: #ff0000;
+}
+
+.footer-social a {
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-size: 40px;
+    }
+
+    .services-labels {
+        left: 5%;
+    }
+
+    .services-info {
+        right: 5%;
+        width: auto;
+    
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .reservation-form, .contact-info {
+        width: 100%;
+    }
+
+    .reservation-form .name-group, 
+    .reservation-form .details-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Réservation</title>
+    <link rel="stylesheet" href="/static/confirmation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <nav>
+            <div class="logo">
+                <img src="/Image_republik_entertainment/Logo republik entertainment.png" alt="Logo Republik Entertainment">
+            </div>
+            <ul>
+                <li><a href="/" class="home">Accueil</a></li>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+            <a href="/contact" class="cta-button">Je fais ma réservation</a>
+        </nav>
+     </header>
+
+    <main class="confirmation-section">
+        <div class="confirmation-container">
+            <h1>Réservation enregistrée !</h1>
+            <p>Votre réservation a été enregistrée avec succès.</p>
+            <p>Un email de confirmation vous a été envoyé. Veuillez vérifier votre boîte de réception et suivre les instructions si nécessaire.</p>
+            <a href="#" id="redirect-button" class="button">OK</a>
+
+        </div>
+    </main>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-logo">
+            <img src="/Image_republik_entertainment/Logo republik entertainment.png" alt="Logo Republik Entertainment">
+            <p> Avec nous, Capturez l'inouï, Devenez mémorable.</p>
+            <div class="footer-social">
+                <a href="https://wa.me/2250584442034" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/Republikent/?locale=fr_FR" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/republikent/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@republikentertainmenttv7535" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Nous joindre</h3>
+            <p><i class="fas fa-phone-alt"></i> +225 05 84 44 20 34</p>
+            <p><i class="fas fa-envelope"></i> RepublikEntertainment@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Angré 9ème tranche, Immeuble DERRA au dos de CGK (3ème étage)</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Liens Rapides</h3>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Republik Entertainment. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const redirectButton = document.getElementById("redirect-button");
+
+        // Détecter l'URL actuelle
+        const currentPath = window.location.pathname;
+
+        // Définir la redirection en fonction de la page actuelle
+        if (currentPath === "/contact") {
+            redirectButton.href = "/contact";
+        } else {
+            redirectButton.href = "/";
+        }
+    });
+</script>
+
+
+</body>
+</html>

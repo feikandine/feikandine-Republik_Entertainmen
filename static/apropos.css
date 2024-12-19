@@ -1,0 +1,582 @@
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&family=Big+Shoulders+Stencil+Display:wght@400&display=swap&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 9px 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex: 1; 
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+
+nav a.active {
+    color: #ff0000; 
+    font-weight: bold; 
+}
+
+
+.logo img {
+    height: 100%; 
+    max-height: 70px; 
+    width: auto; 
+}
+
+.cta-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc0000;
+}
+
+.hero {
+    position: relative;
+    background: url('/Image_republik_entertainment/republik34.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Opacité à 20% */
+    z-index: 1;
+}
+.hero-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400;
+    display: block;
+}
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 85px; 
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 50px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.notre-histoire {
+    /*padding: 2.5em;*/
+    text-align: center;
+    background-color: white;
+    /*margin-bottom: 30px;*/
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+      
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.notre-histoire h2{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size:4em;
+    font-weight: 500;
+    animation-duration: 3s;
+  animation-name:slidein;
+  animation-iteration-count:3;
+   
+}
+.descrihistoire{
+    width: 120vw;
+    background-color:#f0f0f0;
+    padding-top: 20px;
+   margin-bottom: 9.5em;
+
+}
+ .quote {
+    font-family: 'Forum', serif;
+    font-size: 300px;
+    /*color: rgba(0, 0, 0, 0.5);*/
+     color: #ff0000;
+    line-height: 0.5;
+    display: block;
+    margin-bottom: -1rem;
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+.notre-histoire h3{
+    max-width: 35%;
+    text-align:justify;
+    margin: auto;
+    margin-left: 450px;
+    font-size: 2rem;
+    /*color: #333333;*/
+    color: rgba(0, 0, 0, 0.913);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    
+}
+@keyframes colorchanger{
+    /*0% {color: #ff0000;}*/
+    /*25% { color: black;}*/
+    /*50% {color: #B58B61;}*/
+    /*100%{color:}*/
+    from{color: #FF0000;}
+    to{color: #B58B61;}
+
+}
+
+
+.histoire-texte1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-style: italic;  
+    height: 50%;
+   color: #ff0000;
+   margin-bottom: 50px;
+   animation-name: colorchanger ;
+   animation-duration: 20s;
+   animation-delay:2s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate-reverse;
+}
+.histoire-content {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 45px;
+    
+}
+
+.histoire-content img {
+    width: 30%;
+    max-width: 5000px; 
+    border-radius: 0px;
+}
+
+.histoire-content .texte {
+    font-family: 'Josefin Sans', Light;
+    color: #333333; 
+    font-size: 35px; 
+    font-weight: 300;
+    text-align: left; 
+    line-height: 1;
+}
+.texte{
+    width: 45%;
+    text-align:justify;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 100px; 
+    margin-bottom: 60px;
+    padding: 2.5em;
+}
+
+.gallery img {
+    width: 25%; 
+    height: 50vh;
+    object-fit: cover; 
+    border-radius: 0px;
+}
+
+
+.contact-section {
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+}
+
+.content-grid {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin: 0;
+    padding: 0;
+}
+
+.text-content {
+    padding: 0;
+    max-width: 50%;
+    margin-left: 0; 
+    margin-top: 150px;
+}
+
+.text-content h5 {
+    color: #B58B61;
+    font-family: 'Raleway', medium; 
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 50px;
+
+}
+
+.text-content h1 {
+    font-family: 'Raleway', medium; 
+    color: #3b3b3b; 
+    font-size: 65px; 
+    font-weight: 300;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 0; 
+    margin-bottom: 30px;
+}
+
+.background-full-width {
+    background-color: #f0f0f0;
+    width: 120vw; 
+    padding: 50px 0; 
+}
+
+.partie-text  {
+    max-width: 35%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 1;
+    margin-left: 100px; 
+}
+
+.image-content {
+    margin: 0;
+    padding-right: 250px;
+    display: block; 
+}
+
+.image-content .top-image {
+    width: 350px; 
+    height: 450px; 
+    object-fit: cover;
+    max-width: 100%;
+    position: relative;
+    z-index: 3; 
+    top: 150px;  
+    margin-left: 50px;
+}
+
+.image-content .bottom-image {
+    width: 350px; 
+    height: 450px; 
+    object-fit: cover;
+    max-width: 100%; 
+    position: relative;
+    z-index: 2; 
+    margin-left: 380px; 
+    top: -70px;  
+    
+}
+.contact-button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    background-color: #FF0000; 
+    opacity: 0.8; 
+    border: 3px solid #FF0000; 
+    color: #ffffff; 
+    padding: 15px 35px;
+    border-radius: 0px; 
+    width: 60%;
+    margin-top: 130px;
+    margin-bottom: 15px;
+}
+
+.contact-button:hover{
+    background-color: #0056b3; 
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 2rem 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10rem;
+    padding: 0rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.footer-logo img {
+    width: 320px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #000000; /* Match this with other primary elements */
+}
+
+.footer-links ul {
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+}
+
+.footer-links li {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff0000; /* Match primary hover color */
+}
+
+.footer-contact p,
+.footer-social a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-contact i,
+.footer-social i {
+    margin-right: 5px;
+    color: #ff0000;
+}
+
+.footer-social a {
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Ajustements pour les écrans moyens (tablettes et petits ordinateurs de bureau) */
+@media (max-width: 800px) {
+    header {
+        padding: 20px;
+    }
+
+    .hero h1, .hero h3 {
+        font-size: 40px; /* Réduit la taille du texte dans le héros */
+    }
+
+    .notre-histoire h2, .notre-equipe h2 {
+        font-size: 50px; /* Ajuste la taille des titres */
+    }
+
+    .gallery img {
+        max-width: 300px; /* Réduit la taille des images dans la galerie */
+    }
+}
+
+/* Ajustements pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empile les éléments dans le header */
+        text-align: center;
+        padding: 15px;
+    }
+
+    .hero {
+        flex-direction: column; /* Centrer l'image de l'héro et le texte en colonne */
+    }
+
+    .hero h1, .hero h3 {
+        font-size: 30px; /* Réduit davantage la taille du texte dans le héros */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les liens de navigation verticalement */
+        gap: 1rem;
+    }
+
+    .histoire-content {
+        flex-direction: column; /* Empile le texte et l'image verticalement */
+        align-items: center;
+    }
+
+    .histoire-content img {
+        width: 100%; /* Ajuste l'image pour qu'elle occupe toute la largeur disponible */
+        max-width: 500px; /* Limite la largeur maximale */
+    }
+
+    .gallery img {
+        max-width: 100%; /* Permet aux images de la galerie de prendre toute la largeur */
+    }
+
+    .equipe-member img {
+        width: 100%; /* Rend les images d'équipe réactives */
+        max-width: 100%; /* Empêche les débordements */
+    }
+
+    footer {
+        flex-direction: column; /* Empile les éléments dans le footer */
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center; /* Centre les liens sociaux dans le footer */
+    }
+}
+
+/* Ajustements pour les très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+    .hero h1, .hero h3 {
+        font-size: 24px; /* Taille encore plus petite pour les titres du héro */
+    }
+
+    .notre-histoire h2, .notre-equipe h2 {
+        font-size: 40px; /* Taille réduite des titres pour mobile */
+    }
+
+    .cta-button, .reservation-btn, .contact-btn {
+        padding: 10px 15px; /* Réduit le padding des boutons pour mobile */
+        font-size: 1rem; /* Ajuste la taille de la police des boutons */
+    }
+
+    .gallery {
+        flex-direction: column; /* Empile les images de la galerie en colonne */
+        gap: 20px;
+    }
+}

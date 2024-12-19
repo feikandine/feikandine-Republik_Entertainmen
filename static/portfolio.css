@@ -1,0 +1,365 @@
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&family=Big+Shoulders+Stencil+Display:wght@400&display=swap&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #f0f0f0;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 9px 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex: 1; 
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+.logo img {
+    height: 100%; 
+    max-height: 70px; 
+    width: auto; 
+}
+
+.cta-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc0000;
+}
+
+/* Section Héro */
+.hero {
+    position: relative;
+    background: url('/Image_republik_entertainment/republik25..jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*width: 100%;
+    height: 100%;*/
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.hero-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 85px; 
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+/* Section Portfolio */
+#portfolio-section {
+    padding: 50px 100px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#portfolio-section h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 9px;
+    color: #000000;
+    margin-bottom: 90px;
+    margin-top: 30px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0;
+    margin-bottom: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.portfolio-item {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.zoom-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+    display: none;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .zoom-icon {
+    display: block;
+    transform: translateY(-5px);
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 90%;           
+    height: 400px;         
+    object-fit: cover;     
+    border-radius: 0;      
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    color: #333333;
+    margin-top: 22px;
+    margin-bottom: 50px;
+}
+
+/* Styles pour le modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    width: auto; 
+    height: 100vh; 
+    max-width: 100%; 
+    object-fit: contain; 
+}
+.close, .prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+.close {
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+}
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
+}
+.next {
+    right: 10px;
+    transform: translateY(-50%);
+}
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Ajustements pour petits écrans */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #e4e4e4;
+    color: #000000;
+    padding: 2rem 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10rem;
+    padding: 1rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.footer-logo img {
+    width: 320px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #000000; /* Match this with other primary elements */
+}
+
+.footer-links ul {
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+}
+
+.footer-links li {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff0000; /* Match primary hover color */
+}
+
+.footer-contact p,
+.footer-social a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-contact i,
+.footer-social i {
+    margin-right: 5px;
+    color: #ff0000;
+}
+
+.footer-social a {
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-size: 40px;
+    }
+
+}

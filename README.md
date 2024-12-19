@@ -1,2 +1,3 @@
-# feikandine-Republik_Entertainment
-website development for a start-up specializing in photography, video reporting and multimedia production. The project also includes digital tools to present our services, manage bookings and display our achievements./développement  de site web d'une start-up spécialisé  dans la photographie,  reportage vidéo, et  la production multimédia.
+# republik-entertainment
+
+Le projet consiste à développer un site web pour une entreprise spécialisée dans la captation et la production photo/vidéo pour entreprise et particulier. Le site doit être doté d'un module de  de contact et de réservation en ligne :

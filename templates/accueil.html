@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Republik Entertainment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600&family=Big+Shoulders+Stencil+Display:wght@400&display=swap&family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/accueil.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/Image_republik_entertainment/Logo republik entertainment.png" alt="Logo Republik Entertainment">
+            </div>
+            <ul>
+                <li><a href="/" class="home">Accueil</a></li>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+            <a href="/contact" class="cta-button">Je fais ma réservation</a>
+        </nav>
+     </header>
+   
+<!-- Hero Section -->
+<section class="hero">
+    <div class="carousel-background">
+        <img src="/Image_republik_entertainment/republik8.jpg" alt="Image 1" class="carousel-image">
+        <img src="/Image_republik_entertainment/republik75.jpg" alt="Image 2" class="carousel-image">
+        <img src="/Image_republik_entertainment/republik76.jpg" alt="Image 3" class="carousel-image">
+        <img src="/Image_republik_entertainment/black.jpg" alt="Image 4" class="carousel-image">
+    </div>
+    <div class="hero-content">
+        <h1>Avec nous,</h1>
+        <p>Capturez l'inouï,<br> Devenez mémorable.</p>
+    </div>
+
+    <div class="carousel-dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+    </div>
+</section>
+
+<script>
+// Variables
+const images = document.querySelectorAll('.carousel-image');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let interval;
+
+// Fonction pour afficher l'image correspondant à l'index
+function showImage(index) {
+    // Masquer toutes les images sauf celle correspondant à l'index
+    images.forEach((image, i) => {
+        image.style.display = i === index ? 'block' : 'none';
+    });
+
+    // Mettre à jour les points actifs
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+
+    // Mettre à jour l'index actuel
+    currentIndex = index;
+}
+
+// Fonction pour passer à l'image suivante
+function nextImage() {
+    const nextIndex = (currentIndex + 1) % images.length;
+    showImage(nextIndex);
+}
+
+// Fonction pour démarrer le carrousel automatique
+function startCarousel() {
+    interval = setInterval(nextImage, 6000); // Change toutes les 6 secondes
+}
+
+// Fonction pour arrêter le carrousel automatique
+function stopCarousel() {
+    clearInterval(interval);
+}
+
+// Initialisation
+showImage(currentIndex); // Afficher l'image initiale
+startCarousel(); // Démarrer le carrousel
+
+// Gestion des clics sur les boutons
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        stopCarousel(); // Arrêter le carrousel automatique
+        showImage(index); // Afficher l'image correspondante immédiatement
+        startCarousel(); // Redémarrer le carrousel
+    });
+});
+</script>
+
+<div class="accueil-description">
+    <p>Vous ne réaliserez la valeur d’un instant qu’une fois qu’il se sera <br>transformé en souvenir.</br> </p>
+</div> 
+
+    <!-- À propos Section --> 
+    <section id="about">
+            <!-- Image à gauche -->
+            <div class="about-image">
+                <img src="/Image_republik_entertainment/republik1.png" alt="Studio photo">
+            </div>
+            <!-- Texte à droite -->
+            <div class="about-text">
+                <span class="quote">“</span>
+                <h2>QUI SOMMES NOUS ?</h2>
+                <p>
+                    Je suis passionné par la communication, avec 7 ans d'expérience en photographie
+                    professionnelle et 3 ans dans la conception de stratégies de communication. 
+                </p>
+                <p>
+                    Toujours à la recherche de solutions innovantes dans la communication d'entreprise, des personnalités publiques et
+                    des événements, j'apprécie échanger avec des passionnés et professionnels du secteur. 
+                </p>
+                <a href="/a-propos" class="btn">En savoir plus</a>
+            </div>
+    </section> 
+    
+    <!-- Services Section -->
+<section class="services">
+    <!-- Section Title -->
+    <div class="services-header">
+        <h1>SERVICES</h1>
+        <p>Ce que nous proposons</p>
+    </div>
+    
+    <!-- Background Image and Overlays -->
+    <div class="services-content">
+  
+        <!-- Overlay for left-side labels -->
+        <div class="services-labels">
+            <div class="label"><a href="/services">Shooting studio</a></div>
+            <div class="label"> <a href="/services">Portrait Pro</a></div>
+            <div class="label"> <a href="/services">Événementiel</a></div>
+        </div>
+        
+        <!-- Right-aligned text box -->
+        <div class="services-info">
+            <h2>Créativité <br> Passion <br> Art</h2>
+            <p>
+                Découvrez des expériences visuelles uniques, où chaque image raconte une histoire.
+            </p>
+            <p>
+                Confiez-nous vos moments précieux et laissez la magie de la photographie les sublimer.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="portfolio-header">
+        <h1>PORTFOLIO</h1>
+        <p>Nos réalisations récentes</p>
+    </div>
+
+    <!-- Galerie d'images -->
+    <div class="portfolio-gallery">
+        <div class="portfolio-text">
+            <div class="background-full-width">
+                <span class="portfolio-number">01</span> 
+                <div class="portfolio-description">
+                    <h2>Pour vos jours de joie</h2>
+                    <div class="partie-text">
+                        Chez Republik Entertainment, nous croyons que chaque image raconte une histoire. Notre équipe talentueuse est
+                    </div>
+                </div> 
+            </div>
+        </div> 
+        <div class="portfolio-item">
+            <img src="/Image_republik_entertainment/image.png" alt="Projet 2">
+        </div>
+        <div class="portfolio-item">
+            <img src="/Image_republik_entertainment/image (1).png" alt="Projet 3">
+        </div>
+    </div>
+
+    <!-- Bouton "Voir Plus" -->
+    <div class="voir-plus-button">
+        <a href="/portfolio" class="btn">Voir plus</a>
+    </div>
+</section>
+
+<!-- Section Contacts -->
+<section id="contact-section">
+    <div class="contact-container">
+        <!-- Colonne gauche : Nos contacts -->
+        <div class="contact-info">
+            <h2>Nos contacts</h2>
+            <h3>Capturez vos moments, partagez vos histoires</h3>
+            <p><i class="fas fa-phone-alt"></i> +225 05 84 44 20 34           <i class="fab fa-whatsapp"></i> +225 07 87 65 94 34</p>
+            <p><i class="fas fa-envelope"></i> RepublikEntertainment@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Angré 9ème tranche, Immeuble DERRA au dos de CGK (3ème étage)</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1986.1127659700148!2d-3.9761382!3d5.3825506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc19376f0853f4f%3A0x6c512da7e6ce41a0!2sRepublik%20Entertainment!5e0!3m2!1sfr!2sci!4v1731412683269!5m2!1sfr!2sci" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        
+        <!-- Colonne droite : Réservation en ligne -->
+        <div class="reservation-form">
+            <div class="reservation-title">
+                <h2>Réservation en ligne</h2>
+            </div>
+            <form action="/reservation" method="post">
+                <!-- Nom et Prénoms -->
+                <div class="name-group">
+                    <div>
+                        <input type="text" id="nom" name="nom" placeholder="Nom" required autocomplete="family-name">
+                    </div>
+                    <div>
+                        <input type="text" id="prenom" name="prenom" placeholder="Prénoms" required autocomplete="given-name">
+                    </div>
+                </div>
+        
+                <!-- Email et Téléphone -->
+                <div class="form-group">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+                    </div>
+                    <div>
+                        <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required autocomplete="tel" pattern="^\+?\d{10,15}$">
+                    </div>
+                </div>
+
+                 <!-- Détails de la réservation -->
+                 <div class="reservation-details">
+                    <!-- Type de session -->
+                    <div class="details-group">
+                        <div>
+                            <label for="type_session">Type de session :</label>
+                            <select id="type_session" name="type_session">
+                                <option value="Photo d'entreprise ">Photo d'entreprise</option>
+                                <option value="Photo culinaire">Photo culinaire</option>
+                                <option value="Photo d'évenement">Photo d'évenement</option>
+                                <option value="Photo journalisme">Photo journalisme</option>
+                                <option value="Vidéo institutionnelle">Vidéo institutionnelle</option>
+                                <option value="Vidéo de mariage et tout autre d'ordre privé">Vidéo de mariage et tout autre d'ordre privé</option>
+                            </select>
+                        </div>
+                    </div>
+            
+        <!-- Groupement de Date et Heure pour les aligner côte à côte -->
+        <div class="details-group">
+            <div>
+                <label for="date_session">Date :</label>
+                <input type="date" id="date_session" name="date_session">
+            </div>
+            <div>
+                <label for="heure_session">Heure :</label>
+                <select id="heure_session" name="heure_session" required>
+                        <option value="" disabled selected>Veuillez sélectionner une heure</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Nombre de personnes -->
+        <div class="details-group">
+            <div>
+                <label for="nb_personnes">Nombre de personnes :</label>
+                <input type="number" id="nb_personnes" name="nb_personnes" min="1">
+            </div>
+        </div>
+    </div>
+        
+            <!-- Détails du message -->
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Votre message" rows="4" style="width: 100%;"></textarea>
+            </div>
+        
+        
+                <!-- Bouton de soumission -->
+                <div class="button-container">
+                    <button type="submit">ENVOYER</button>
+                </div>
+
+        
+            </form>
+            <!-- Popup Notification -->
+<div id="popup" style="display: none;">
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <h2>Réservation réussie !</h2>
+            <p>Merci, votre réservation a bien été enregistrée. Un email de confirmation a été envoyé à l'adresse fournie.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-logo">
+            <img src="/Image_republik_entertainment/Logo republik entertainment.png" alt="Logo Republik Entertainment">
+            <p> Avec nous, Capturez l'inouï, Devenez mémorable.</p>
+            <div class="footer-social">
+                <a href="https://wa.me/2250584442034" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/Republikent/?locale=fr_FR" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/republikent/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@republikentertainmenttv7535" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Nous joindre</h3>
+            <p><i class="fas fa-phone-alt"></i> +225 05 84 44 20 34</p>
+            <p><i class="fas fa-envelope"></i> RepublikEntertainment@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Angré 9ème tranche, Immeuble DERRA au dos de CGK (3ème étage)</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Liens Rapides</h3>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/a-propos">À propos</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contacts</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Republik Entertainment. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script>
+    // Gérer la soumission du formulaire avec AJAX
+    document.getElementById("reservation-form").addEventListener("submit", function(event){
+        event.preventDefault();  // Empêcher la soumission normale
+
+        var formData = new FormData(this);  // Récupérer les données du formulaire
+
+        fetch("/reservation", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                // Afficher le popup de succès
+                document.getElementById("popup").style.display = "block";
+            } else {
+                alert("Erreur lors de la réservation. Veuillez réessayer.");
+            }
+        })
+        .catch(error => {
+            alert("Une erreur est survenue. Veuillez réessayer.");
+        });
+    });
+
+    // Fonction pour fermer le popup
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+<script>
+    document.getElementById('date_session').addEventListener('change', function () {
+        const date = this.value; // Récupérer la date sélectionnée
+        const heureSessionSelect = document.getElementById('heure_session');
+        
+        // Réinitialiser le champ des heures
+        heureSessionSelect.innerHTML = '<option value="" disabled selected>Chargement...</option>';
+
+        // Appeler l'API pour récupérer les heures disponibles
+        fetch(`/api/heures-disponibles?date=${date}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la récupération des heures.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Si aucune heure n'est disponible, afficher un message et demander de choisir une autre date
+                if (data.length === 0) {
+                    alert("Aucun créneau disponible pour cette date. Veuillez choisir une autre date.");
+                    heureSessionSelect.innerHTML = '<option value="" disabled selected>Choisissez une autre date</option>';
+                } else {
+                    // Ajouter les heures disponibles au champ de sélection
+                    heureSessionSelect.innerHTML = '<option value="" disabled selected>Sélectionnez une heure</option>';
+                    data.forEach(heure => {
+                        const option = document.createElement('option');
+                        option.value = heure;
+                        option.textContent = heure;
+                        heureSessionSelect.appendChild(option);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                heureSessionSelect.innerHTML = '<option value="" disabled>Aucune heure disponible</option>';
+            });
+    });
+
+</script>
+
+
+<script>
+    // Définir la date minimale à partir de demain
+    document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date();
+        today.setDate(today.getDate() + 1); // Définir la date à demain
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); // Mois de 0 à 11
+        const yyyy = today.getFullYear();
+        const tomorrow = yyyy + '-' + mm + '-' + dd; // Format YYYY-MM-DD
+        
+        // Appliquer cette date comme valeur minimale pour la date de la session
+        document.getElementById('date_session').setAttribute('min', tomorrow);
+    });
+</script>
+
+</body>
+</html>
